@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-class UpdatePost
+class UpdatePostCommand
 {
     private \App\Domain\Post\PostService $service;
     function __construct(\App\Domain\Post\PostService $service)

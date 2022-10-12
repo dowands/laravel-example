@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
-    public function get($id)
+    public function get(\App\Command\UpdatePostCommand $command, $id)
     {
-        return \Illuminate\Support\Facades\App::make(\App\Command\UpdatePost::class)->exec($id);
+        return $command->exec($id);
     }
 }
